@@ -179,7 +179,7 @@ a{
 .main{
     width: 100%;
     height: auto;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     
 }
 
@@ -352,34 +352,20 @@ p{
 
 
 .pagination{
-    margin: 120px 0 40px;
+    padding: 50px 0 80px;
     text-align: center;
-    border-top: 1px solid #eee;
-    
-    display: block;
 }
 
-.pagenumber,.extend-next{
-    position: relative;
-    display: inline-block;
-    margin: 0 10px;
-    padding: 0 10px;
-    top: -1px;
-    line-height: 30px;
+.pagination span{
+    cursor: pointer;
+    font-size: 40px;
     color: #555;
-    border-top: 1px solid #eee;
+    margin: 0 80px;
+}
+.pagination span:hover{
+    color: #f15623;
 }
 
-
-.current{
-    color: #fff;
-    background: #ccc;
-
-}
-
-.pagination a:hover{
-    border-top: 1px solid #555;
-}
 
 
 
@@ -419,29 +405,15 @@ p{
 
 .footer{
     width: 100%;
-    height: 80px;
     position: absolute;
-    display: block;
     margin-top: 30px;
 }
 
-.footer-inner{
-    margin: 10px auto;
-    text-align: center;
-    color: #555;
-}
 
-.theme-link{
-    text-decoration: none;
-    color: #ccc;
-    display: inline-block;
-    border-bottom: 1px solid #ccc;
-}
 
-.theme-link:hover{
-    color: #555;
-    border-bottom-color: #555;
-}
+
+
+
 
 
 
@@ -478,9 +450,8 @@ p{
 }
 
 #sidebar li:hover{
-    color: #f15623;
+    color: #660077;
 }
-
 
 
 
@@ -510,6 +481,19 @@ p{
     min-height: 100%;
     background-color: #eee;
     opacity: 0; 
+    padding: 70px 0;
+}
+
+.nav-content a{
+    text-decoration: none;
+}
+.nav-content p{
+    font-family: "Microsoft YaHei";
+}
+
+.nav-content ul li{
+    text-decoration: none;
+    text-align: center;
 }
 
 
@@ -520,29 +504,63 @@ p{
     margin: 20px auto;
 }
 
-.nav-bloglink-content{
-    padding-top: 70px;
+
+.nav-prof-content{
+    text-align: center;
+    font-size: 13px;
+    font-family: "Microsoft YaHei";
+    color: #555;
+    line-height: 1.8em;
 }
 
-.nav-content ul li p{
-    font-family: "Microsoft YaHei";
+
+.nav-prof-content p:hover{
+    font-size: 1.5em;
+}
+
+
+
+
+
+
+
+
+
+.nav-sidebarcontact-content{
+    padding-top: 170px;
+
+}
+
+.nav-sidebarcontact-content li{
+    margin-top: 30px;
+}
+
+
+.nav-sidebarcontact-content a{
+    font-size: 25px;
+    color: #222;
+}
+
+.nav-sidebarcontact-content p{
     font-size: 13px;
     color: #555;
-    margin-top: 5px;
-}
-.nav-content ul li p:hover{
-    color:#f15623;    
 }
 
-.nav-content ul li{
-    text-decoration: none;
+
+
+
+.nav-bloglink-content{
     text-align: center;
-    cursor: pointer;
+    font-family: "Microsoft YaHei";
+    font-size: 13px;
 }
 
-.nav-content a{
-    text-decoration: none;
+.nav-bloglink-content p{
+    color: #555;
+    margin-top: 5px;    
 }
+
+
 
 
 .nav-con-close{

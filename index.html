@@ -4,10 +4,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>一件白衬衫</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
+    </script>
     <link rel="stylesheet" type="text/css" href="css-content.css">
     <script type="text/javascript" src="javascript.js"></script>
     <link rel="stylesheet" type="text/css" href="Font-Awesome-3.2.1\css\font-awesome-ie7.min.css">
     <link rel="stylesheet" type="text/css" href="Font-Awesome-3.2.1\css\font-awesome.min.css">
+
     
 
 
@@ -79,8 +82,8 @@
                             <span class="art-time">
                                 <time class="art-post-time">发表于:2016-07-22&nbsp;|</time>
                             </span>
-                            <span class="art-category">读书笔记&nbsp;|</span>
-                            <span class="art-comments-count">暂无评论</span>
+                            <span class="art-category">读书笔记&nbsp;</span>
+                            <!-- <span class="art-comments-count">暂无评论</span> -->
                         </div> 
                         <div class="art-abstract">
                             去年开始跑步，现在隔三差五地跑5公里，基本养成了习惯。城市的喧嚣让人无法沉静，跑步让我恢复孤独与平静，虽然看过村上春树的《当我跑步时我谈些什么》，再读到下面文章的时候还是特别有感触，与你共勉。 原文我33岁那年秋天决定以写小说为生。为了保持健康，我开始跑步，每天凌晨4点起床，写作4小时，跑10公里。 我是那种容易发胖的体质。我妻子却无论怎么吃也胖不起 ...
@@ -128,15 +131,15 @@
                             <span class="art-time">
                                 <time class="art-post-time">发表于:2016-07-23&nbsp;|</time>
                             </span>
-                            <span class="art-category">读书笔记&nbsp;|</span>
-                            <span class="art-comments-count">暂无评论</span>
+                            <span class="art-category">读书笔记&nbsp;</span>
+                            <!-- <span class="art-comments-count">暂无评论</span> -->
                         </div> 
                         <div class="art-abstract">
                             全栈工程师现在是个很热的话题，如何定义全栈工程师？在著名的问答网站Quora上有人提出了这个问题，其中一个获得了高票的回答是： 全栈工程师是指，一个能处理数据库、服务器、系统工程和客户端的所有工作的工程师。根据项目的不同，客户需要的可能是移动栈、Web栈，或者原生应用栈 深以为然，所以，全栈工程师应该分为Web全栈和App全栈。恰巧最近看了本有关Web ...
                         </div>
                         <div class="art-content">
                             <span>
-                                <img src = "img\Haruki_Murakami.jpg">
+                                <img src = "img\full-stack-developer.jpg">
                             </span>
                             
                             
@@ -193,8 +196,8 @@
                             <span class="art-time">
                                 <time class="art-post-time">发表于:2016-07-23&nbsp;|</time>
                             </span>
-                            <span class="art-category">读书笔记&nbsp;|</span>
-                            <span class="art-comments-count">暂无评论</span>
+                            <span class="art-category">读书笔记&nbsp;</span>
+                            <!-- <span class="art-comments-count">暂无评论</span> -->
                         </div>
 
 
@@ -287,38 +290,27 @@
                         </div>
 
                 </section>
-                <nav class = "pagination">
-                    <span class="pagenumber current">1</span>
-                    <a class="pagenumber" href="javascript:void(0);">2</a>
-                    <span class="pagespace">…</span>
-                    <a class="pagenumber" href="javascript:void(0);">4</a>
-                    <a class="extend-next" rel="next" href="javascript:void(0);">&gt;</a>        
-                </nav>
+                
             </div>  <!-- content标签结束 -->
 
         </div>    <!-- main-inner标签结束 -->        
 
 
-        <footer id="footer" class="footer">
-            <div class="footer-inner">
-                <div class="copyright">
-                    © 2015 -
-                    <span itemprop="copyrightYear">2016</span>        
-                </div> 
-                <div class="power-by">
-                    由
-                    <a class="theme-link" href="http://hexo.io">Hexo</a>
-                    强力驱动 
-                </div>
-                <div class="theme-info">
-                    主题 -
-                    <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-                    NexT.Muse
-                    </a>
-                </div>   
-            </div>
-        </footer>    <!-- footer标签结束 -->
+        
     </div>    <!-- main内容标签结束 --> 
+    
+    <nav class = "pagination">
+        <span id="previous-page" class="icon-double-angle-left" title="page-previous" href="javascript:;"></span>
+        <span id="next-page" class="icon-double-angle-right" title="page-next" href="javascript:;"></span>      
+    </nav>
+
+
+
+
+    <footer id="footer" class="footer">
+            
+                
+    </footer>    <!-- footer标签结束 -->
 
 
 
@@ -349,7 +341,7 @@
     <div id="sidebar">
         <ul>
             <li id="sidebarprof" class="item">
-                <span class="icon-user-md"></span>
+                <span class="icon-lightbulb"></span>
                 <p>我</p>          
             </li>
             <li id="sidebararticle-menu" class="item">
@@ -357,7 +349,7 @@
                 <p>目录</p>
             </li>
             <li id="sidebarcontact" class="item">
-                <span class="icon-comments"></span>
+                <span class="icon-comment"></span>
                 <p>关于</p>
             </li>
             <li id="sidebarbloglink" class="item">
@@ -376,11 +368,44 @@
         <div class="nav-con-close">
             <span class="icon-chevron-left"></span>
         </div>
-        <div>
-             <a href="http://www.baidu.com" target="_blank">
-                <img src="img\nav-content\juzhongren.gif">
-                <p>剧中人</p>
-            </a> 
+        <div id="nav-prof-content" class="nav-prof-content">
+            <p><strong>一件白衬衫</strong></p>
+            <p>2016.8.8</p>
+            <br><br>
+            <p>我大学专业是‘城市规划’</p>
+            <p>别人问我毕业了是不是当城管</p>
+            <p>....呵呵....</p>
+            <p>城管可是宇宙第一战队啊~</p>
+            <br>
+            <p>三个月前</p>
+            <p>开始自学web前端</p>
+            <p>刚开始</p>
+            <p>敲一段Hello World都觉得</p>
+            <p>可以装一波B了~~</p>
+            <br>
+            <p>慢慢的</p>
+            <p>学会了css</p>
+            <p>让我独爱微软雅黑#555</p>
+            <p>JavaScript、JQuery</p>
+            <p>function(){}、事件逻辑...</p>
+            <p>也经常搞得脑袋一团麻</p>
+            <br>
+            <p>关于这个Blog..</p>
+            <p>域名中的chueng</p>
+            <p>因为我喜欢张学友</p>
+            <p>ows</p>
+            <p>one-white-shirt的简写</p>
+            <p>差点用了很low的yjbcs</p>
+            <br>
+            <p>Blog里乱七八糟的都有</p>
+            <p>记录我技术的成长</p>
+            <p>逛到好的文章也会转进来</p>
+            <p>写一些不能发朋友圈的</p>
+            <p>我的摄影作品</p>
+            <p>.</p>
+            <p>.</p>
+            <p>.</p>
+            
         </div>   
     </div>
 
@@ -389,10 +414,7 @@
             <span class="icon-chevron-left"></span>
         </div>
         <div>
-             <a href="http://www.baidu.com" target="_blank">
-                <img src="img\nav-content\juzhongren.gif">
-                <p>剧中人</p>
-            </a> 
+            
         </div> 
     </div>
 
@@ -401,11 +423,30 @@
         <div class="nav-con-close">
             <span class="icon-chevron-left"></span>
         </div> 
-        <div>
-            <a href="http://www.baidu.com" target="_blank">
-                <img src="img\nav-content\juzhongren.gif">
-                <p>剧中人</p>
-            </a>  
+        <div class="nav-sidebarcontact-content">
+            <ul>
+                <li title="传送门~">
+                    <a class="icon-github" href="https://github.com/white-shirt" target="_blank">
+                        <p>github</p>
+                        <p>打野升级中...</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="icon-comments" title="一件白衬衫">
+                        <p>WeChat</p>
+                    </a>
+                </li>
+                <li title="传送门~">
+                    <a class="icon-globe" href="http://weibo.com/yibanxiaodian" target="_blank">
+                        <p>sina-weibo</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="icon-envelope-alt" title="775321614@qq.com">
+                        <p>mail</p>    
+                    </a>
+                </li>    
+            </ul>      
         </div> 
     </div>
 
@@ -418,42 +459,42 @@
         <div>
             <ul class="nav-bloglink-content">
                 <li>
-                    <a href="http://bh-lay.com/" target="_blank">
+                    <a href="http://bh-lay.com/" target="_blank" title="传送门~">
                         <img src="img\nav-content\juzhongren.gif">
                         <p>剧中人</p>
                     </a>   
                     <div class="nav-content-underline"></div>
                 </li>
                 <li>
-                    <a href="http://www.qianduanmei.com/" target="_blank">
+                    <a href="http://www.qianduanmei.com/" target="_blank" title="传送门~">
                         <img src="img\nav-content\qianduanmei.gif">
                         <p>前端美</p>
                     </a>  
                     <div class="nav-content-underline"></div>
                 </li>
                 <li>
-                    <a href="http://zerosoul.github.io/" target="_blank">
+                    <a href="http://zerosoul.github.io/" target="_blank" title="传送门~">
                         <img src="img\nav-content\yangxiaoer.gif">
                         <p>杨小二</p>
                     </a>   
                     <div class="nav-content-underline"></div>
                 </li>
                 <li>
-                    <a href="http://fex.baidu.com/" target="_blank">
+                    <a href="http://fex.baidu.com/" target="_blank" title="传送门~">
                         <img src="img\nav-content\FEX web.gif">
                         <p>百度FEX前端研发部</p>
                     </a>    
                     <div class="nav-content-underline"></div>    
                 </li>
                 <li>
-                    <a href="http://taobaofed.org/" target="_blank">
+                    <a href="http://taobaofed.org/" target="_blank" title="传送门~">
                         <img src="img\nav-content\taobao-FED.gif">
                         <p>淘宝FED前端团队</p>
                     </a>    
                     <div class="nav-content-underline"></div> 
                 </li>
                 <li>
-                    <a href="https://zhuanlan.zhihu.com/FrontendMagazine" target="_blank">
+                    <a href="https://zhuanlan.zhihu.com/FrontendMagazine" target="_blank" title="传送门~">
                         <img src="img\nav-content\zhihuweb.gif">
                         <p>知乎前端专栏</p>   
                     </a>    
