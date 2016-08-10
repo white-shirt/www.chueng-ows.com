@@ -9,31 +9,33 @@
 
 
  //阅读全文按钮  
-    function btnshowarticle(obj){          
+    // function btnshowarticle(obj){          
         
-        var articleAbstract = obj.parentNode.previousElementSibling.previousElementSibling;
-        var articleContent = articleAbstract.nextElementSibling;
+    //     var articleAbstract = obj.parentNode.previousElementSibling.previousElementSibling;
+    //     var articleContent = articleAbstract.nextElementSibling;
 
            
-        if(obj.innerHTML == "阅读全文"){
-            obj.innerHTML = "收起全文";
-            articleAbstract.style.display = "none";
-            articleContent.style.display = "block";
+    //     if(obj.innerHTML == "阅读全文"){
+    //         obj.innerHTML = "收起全文";
+    //         articleAbstract.style.display = "none";
+    //         articleContent.style.display = "block";
             
 
             
-        }else{
+    //     }else{
             
 
-            articleAbstract.style.display = "block";
-            articleContent.style.display = "none";
-            obj.innerHTML = "阅读全文";
+    //         articleAbstract.style.display = "block";
+    //         articleContent.style.display = "none";
+    //         obj.innerHTML = "阅读全文";
             
-        }
+    //     }
   
-    }    
+    // }    
 
 //阅读全文按钮结束
+
+
 
 
 
@@ -75,5 +77,16 @@ window.onload = function(){
 
     }     
 }
+
+
+
+
+$(document).ready(function(){
+    $(".show-art").click(function(){
+        $(this).prev(".art-content").prev(".art-abstract").slideToggle(1000);
+        console.log("zhankai");
+        $(this).prev(".art-content").slideToggle(2000);
+    });
+})
 
 
