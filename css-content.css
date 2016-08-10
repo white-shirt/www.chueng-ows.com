@@ -233,6 +233,12 @@ a{
     font-size: 12px;
     text-align: center;
 }
+.art-meta a{
+    color: #999;
+}
+.art-meta a:hover{
+    color: #f15623;
+}
 
 .art-post-time,.art-category,.art-comments-count{
     display: inline-block;
@@ -295,6 +301,16 @@ code{
     border-radius: 4px;
 }
 
+figure{
+    background: #eee;
+    margin: 1em 0;
+    padding: 1em;
+    border-radius: 5px;
+    text-shadow: 0 0 1px #fff;
+    line-height: 1.6;
+    overflow: auto;
+    font-size: 0.9em;
+}
 
 
 
@@ -428,9 +444,9 @@ p{
    
     width: 40px;
     position: fixed;
-    left: 0;
+    left: -40px;
     top: 0;
-    background-color: #C2C2C2;
+    background-color: none;
     height: 100%;
     z-index: 1000;
 
@@ -468,9 +484,9 @@ p{
     position: absolute;
     bottom: 80px;
     width: 40px;
+    left: 80px;
     text-align: center;
     cursor: pointer;
-    font-size: 15px;
 }
 
 .nav-content{
@@ -479,7 +495,7 @@ p{
     left: -200px;
     width: 200px;
     min-height: 100%;
-    background-color: #eee;
+    background-color: none;
     opacity: 0; 
     padding: 70px 0;
 }
@@ -492,7 +508,7 @@ p{
 }
 
 .nav-content ul li{
-    text-decoration: none;
+    list-style: none;
     text-align: center;
 }
 
@@ -606,9 +622,9 @@ p{
 
 
 
-.closeBar-move-right{
-    -webkit-animation-name: cmr;    /*动画名称*/
-    animation-name: cmr;
+.closeBar-move-left{
+    -webkit-animation-name: cml;    /*动画名称*/
+    animation-name: cml;
     -webkit-animation-duration: 1s;    /*持续时间*/
     animation-duration: 1s;
     -webkit-animation-iteration-count: 1;    /*执行次数*/
@@ -617,23 +633,23 @@ p{
     animation-fill-mode: forwards;
 }
 /*关键帧*/
-@keyframes cmr{       
+@keyframes cml{       
     from{
 
     }
     to{
-        -webkit-transform: translateX(160px) rolate(405deg) scale(1.5);
-        transform: translateX(160px) rotate(405deg) scale(1.5);
+        -webkit-transform: translateX(-160px) rolate(-405deg) scale(0.8);
+        transform: translateX(-160px) rotate(-405deg) scale(0.8);
     }
 }
 
-@-webkit-keyframes cmr{
+@-webkit-keyframes cml{
     from{
 
     }
     to{
-        -webkit-transform: translateX(160px) rolate(405deg) scale(1.5);
-        transform: translateX(160px) rotate(405deg) scale(1.5);
+        -webkit-transform: translateX(-160px) rolate(-405deg) scale(0.8);
+        transform: translateX(-160px) rotate(-405deg) scale(0.8);
     }
 }
 
@@ -673,9 +689,9 @@ p{
 
 
 
-.closeBar-move-left{
-    -webkit-animation-name: cml;
-    animation-name: cml;
+.closeBar-move-right{
+    -webkit-animation-name: cmr;
+    animation-name: cmr;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-iteration-count: 1;
@@ -683,24 +699,24 @@ p{
     -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
-@keyframes cml{
+@keyframes cmr{
     from{
-        -webkit-transform: scale(1.5) rolate(405deg);
-        transform: scale(1.5) rolate(405deg); 
+        -webkit-transform: scale(0.8) rolate(405deg);
+        transform: scale(0.8) rolate(405deg); 
     }
     to{
-        -webkit-transform: translateX(-160px) scale(1) rotate(-360deg);
-        transform: translateX(-160px) scale(1) rotate(-360deg);
+        -webkit-transform: translateX(160px) scale(1) rotate(360deg);
+        transform: translateX(160px) scale(1) rotate(360deg);
     }
 }
-@webkit-keyframes cml{
+@webkit-keyframes cmr{
     from{
-        -webkit-transform: scale(1.5) rolate(405deg);
-        transform: scale(1.5) rolate(405deg);
+        -webkit-transform: scale(0.8) rolate(405deg);
+        transform: scale(0.8) rolate(405deg);
     }
     to{
-        -webkit-transform: translateX(-160px) scale(1) rotate(-360deg);
-        transform: translateX(-160px) scale(1) rotate(-360deg);
+        -webkit-transform: translateX(160px) scale(1) rotate(360deg);
+        transform: translateX(160px) scale(1) rotate(360deg);
     }
 }
 

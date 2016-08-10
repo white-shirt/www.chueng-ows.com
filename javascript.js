@@ -19,6 +19,7 @@
             obj.innerHTML = "收起全文";
             articleAbstract.style.display = "none";
             articleContent.style.display = "block";
+            
 
             
         }else{

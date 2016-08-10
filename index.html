@@ -71,41 +71,101 @@
                             <h1 class="art-title">
                                 <a href="javascript:void(0);">
 
-                                村上春树：人生马拉松
+                                回到顶部js代码
 
                                 </a>  
                             </h1>
                         </header>
                         <div class="art-meta">
                             <span class="art-time">
-                                <time class="art-post-time">发表于:2016-07-22&nbsp;|</time>
+                                <time class="art-post-time">发表于:2016-08-10&nbsp;|</time>
                             </span>
-                            <span class="art-category">读书笔记&nbsp;</span>
+                            <span class="art-category">技术篇&nbsp;</span>
                             <!-- <span class="art-comments-count">暂无评论</span> -->
                         </div> 
                         <div class="art-abstract">
-                            去年开始跑步，现在隔三差五地跑5公里，基本养成了习惯。城市的喧嚣让人无法沉静，跑步让我恢复孤独与平静，虽然看过村上春树的《当我跑步时我谈些什么》，再读到下面文章的时候还是特别有感触，与你共勉。 原文我33岁那年秋天决定以写小说为生。为了保持健康，我开始跑步，每天凌晨4点起床，写作4小时，跑10公里。 我是那种容易发胖的体质。我妻子却无论怎么吃也胖不起 ...
+                            <p>几乎所有网页都有回到顶部的功能，用户访问网页时可以迅速返回顶部。当网页高度过高时这个功能就显得尤其重要。实现这个功能有几种方法。</p>
+                            <p>方法一:使用默认链接锚记</p>
+                            <p><code>&lt;a href="#top">&lt;/a>或&lt;a href="#">&lt;/a></code></p>
+                            <p>方法二:href指向特定id：</p>
+                            <p><code>&lt;a href="#xxxx">&lt;/a></code>例如给body标签添加<code>&lt;body id="xxxx"></code></p>
                         </div>
                         <div class="art-content">
-                            <span>
+                            <h1>方法一:使用默认链接锚记</h1>
+                            <figure>
+                                <p>&lt;a href="#top">&lt;/a>或&lt;a href="#">&lt;/a></p>
+                            </figure>
+                            <h1>方法二:href指向特定id</h1>
+                            <figure>
+                                <p>
+                                    &lt;html><br>
+                                    &lt;head><br>
+                                    &lt;body id="xxxx"><br>
+                                        &lt;a class="arrowtop" href="#xxxx">&lt;/a><br>
+                                    &lt;/body><br>
+                                    &lt;/head><br>
+                                    &lt;/html>
+                                </p>
+                            </figure>
+                            <h1>方法三:使用简单脚本</h1>
+                            <p>设置scrollTo(x,y)中的x、y的值来跳转到页面的具体位置</p>
+                            <figure>
+                                <p>&lt;a href="javascript:window.scollTo(0,0)">&lt;/a></p>
+                            </figure>
+                            <p>前面几种方法实现起来比较简单，但是过程比较直接，效果生硬，就像是两个画面直接切换一样。没有好的用户体验而言。接下来介绍的方法会使页面滚动，效果也更佳。</p>
+                            <h1>方法三:JavaScript-添加点击事件</h1>
+                            <p>html代码关键部分</p>
+                            <figure>
+                                 <p>
+                                    &lt;html><br>
+                                    &lt;head><br>
+                                    &lt;body id="xxxx"><br>
+                                            &lt;a href="javascript:;" id="arrowtopbtn"><br>
+                                                &lt;i style="font-size: 20px;color: black;" class="icon-arrow-up">&lt;/i><br>
+                                            &lt;a><br>
+                                    &lt;/body><br>
+                                    &lt;/head><br>
+                                    &lt;/html>
+                                </p>        
+                            </figure>
+                            <p>js代码部分</p>                           
+                            <figure>
+                                window.onload = function(){<br>
+                                    //获取回到顶部按钮<br>
+                                    var obtn = document.getElementById("arrowtopbtn");<br>
+                                    var timer = null;<br>
+                                    //滚动条触发回到顶部按钮<br>
+                                    window.onscroll = function(){<br>
+                                        var ostop = document.documentElement.scrollTop || document.body.scrollTop; <br>
+                                        //700px显示按钮<br>
+                                        if(ostop >= 700){<br>
+                                        obtn.style.display="block";<br>
+                                    }else{<br>
+                                        obtn.style.display="none";<br>
+                                    }<br>
+                                    
+                                    }<br>
+                                    
 
-                                <img src = "img\Haruki_Murakami.jpg" alt = "村上春树" tittle = "村上春树">
-                            
-                            </span>
-                            <h1>前言</h1>
-                            <p>去年开始跑步，现在隔三差五地跑5公里，基本养成了习惯。城市的喧嚣让人无法沉静，跑步让我恢复孤独与平静，虽然看过村上春树的《当我跑步时我谈些什么》，再读到下面文章的时候还是特别有感触，与你共勉。</p>
-                            <h1>原文</h1>
-                            <p>我33岁那年秋天决定以写小说为生。为了保持健康，我开始跑步，每天凌晨4点起床，写作4小时，跑10公里。</p></br>
-                            <p>我是那种容易发胖的体质。我妻子却无论怎么吃也胖不起来。这让我时常陷入沉思：“人生真是不公平啊！一些人无需认真就能得到的东西，另一些人却需要付出很多才能换来。”不过转念一想，那些不费吹灰之力就能保持苗条的人，不会像我这样重视饮食和运动，也许老化得更快。什么才是公平，还得从长计议。</p></br>
-                            <p>几年之后，我终于步入小说家的行列，还成功减掉了多余的体重并戒掉了烟瘾。说起坚持跑步，总有人向我表示钦佩：“你真是意志超人啊！”说老实话，我觉得跑步这东西和意志没多大关联。能坚持跑步，恐怕还是因为这项运动合乎我的要求：不需要伙伴或对手，也不需要特别的器械和场所。人生本来如此：喜欢的事自然可以坚持，不喜欢的怎么也长久不了。</p></br>
-                            <p>在这期间，我坚持每年都参加一次马拉松比赛，不过100公里长的“超级马拉松”只跑过一次。那次经历真是终身难忘。</p></br>
-                            <p>那是1996年6月23日，我报名参加了在日本北海道佐吕间湖畔举行的超级马拉松大赛，全程100公里。清晨5点，我踌躇满志地站在了起跑线上。比赛的前半段是从起点到55公里休息站间的路程。没什么好说的，我只是安静地向前跑、跑、跑，感觉和每周例行的锻炼一样。到达55公里休息站后，我换了身干净衣服，吃了些妻子准备的点心。这时我发现双脚有些肿胀，于是赶紧换上一双大半号的跑鞋，又继续上路了。</p></br>
-                            <p>从55公里到75公里的路程变得极其痛苦。此时的我心里念叨着向前冲，但身子却不听使唤。我拼命摆动手臂，觉得自己像块在绞肉机里艰难移动的牛肉，累的几乎要瘫倒在地。一会功夫，就有选手接二连三超过了我。最让人心焦的是，一位70多岁的老奶奶超过我时大喊：“坚持下去！”</p></br>
-                            <p>“怎么办？还有一半路，如何挺过去？”这时，我想起一本书上介绍的窍门。于是我开始默念：“我不是人！我是一架机器。我没有感觉。我只会前进！”这句咒语反复在脑子里转圈。我不再看远方，只把目标放在前面3米远处。天空和风、草地、观众、喝彩声、现实、过去——所有这些都被我排除在外。</p></br>
-                            <p>神奇的是，不知从哪一秒开始，我浑身的痛楚突然消失。整个人仿佛进入自动运行状态。我开始不断超越他人。接近最后一段赛程时，已经将200多人甩在身后。</p></br>
-                            <p>下午4点42分，我终于到达终点，成绩是11小时42分。这次经历让我意识到：终点线只是一个记号而已，其实并没有什么意义，关键是这一路你是如何跑的。人生也是如此。</p></br>
-                            <p>当时的我只有30多岁，但也不能称为“小伙子”了。这是耶稣死去的年龄。在这个年纪，我正式站在文学的起跑线上——虽然已不再年轻。</p>
-                         
+                                    obtn.onclick = function(){<br>
+                                        // 设置定时器<br>
+                                        timer = setInterval(function(){<br>
+                                            // 获取滚动条距离顶部的高度<br>
+                                            var ostop = document.documentElement.scrollTop || document.body.scrollTop; <br>
+                                            //向下取整，滚动条的速度。<br>
+                                            var ispeed = Math.floor(-ostop/6);<br>
+                                            //滚动条距离顶部的高度<br>
+                                            document.documentElement.scrollTop = document.body.scrollTop = ostop + ispeed;<br>
+                                            if(ostop == 0){<br>
+                                                clearInterval(timer);   <br> 
+                                            }  <br> 
+                                        },30);<br>
+                                        
+
+                                    }  <br>   
+                                }
+                            </figure>
+                               
                         </div> 
                         <div class="show-art" >
                             <a class="btn" href="javascript:void(0);" onclick="btnshowarticle(this)">阅读全文</a>
@@ -127,10 +187,10 @@
                         </header>
                         <div class="art-meta">
                             <span class="art-time">
-                                <time class="art-post-time">发表于:2016-07-23&nbsp;|</time>
+                                <time class="art-post-time">发表于:2016-08-10&nbsp;|</time>
                             </span>
-                            <span class="art-category">读书笔记&nbsp;</span>
-                            <!-- <span class="art-comments-count">暂无评论</span> -->
+                            <span class="art-category">读书笔记&nbsp;|</span>
+                            <a href="http://zerosoul.github.io/2016/06/18/about-full-stack-engineer/" target="_blank">文章来源</a> 
                         </div> 
                         <div class="art-abstract">
                             全栈工程师现在是个很热的话题，如何定义全栈工程师？在著名的问答网站Quora上有人提出了这个问题，其中一个获得了高票的回答是： 全栈工程师是指，一个能处理数据库、服务器、系统工程和客户端的所有工作的工程师。根据项目的不同，客户需要的可能是移动栈、Web栈，或者原生应用栈 深以为然，所以，全栈工程师应该分为Web全栈和App全栈。恰巧最近看了本有关Web ...
@@ -192,10 +252,10 @@
                         </header>
                         <div class="art-meta">
                             <span class="art-time">
-                                <time class="art-post-time">发表于:2016-07-23&nbsp;|</time>
+                                <time class="art-post-time">发表于:2016-08-10&nbsp;|</time>
                             </span>
-                            <span class="art-category">读书笔记&nbsp;</span>
-                            <!-- <span class="art-comments-count">暂无评论</span> -->
+                            <span class="art-category">读书笔记&nbsp;|</span>
+                            <a href="http://zerosoul.github.io/2016/03/06/how-to-interview/" target="_blank">文章来源</a> 
                         </div>
 
 
@@ -342,10 +402,10 @@
                 <span class="icon-lightbulb"></span>
                 <p>我</p>          
             </li>
-            <li id="sidebararticle-menu" class="item">
+          <!--   <li id="sidebararticle-menu" class="item">
                 <span class="icon-th-list"></span>
                 <p>目录</p>
-            </li>
+            </li> -->
             <li id="sidebarcontact" class="item">
                 <span class="icon-comment"></span>
                 <p>关于</p>
@@ -356,7 +416,7 @@
             </li>
         </ul>
         <div id="closeBar">
-            <span class="icon-remove"></span>  
+            <span style="font-size: 25px;" class="icon-plus"></span>  
         </div>
     </div>
 
@@ -407,7 +467,7 @@
         </div>   
     </div>
 
-    <div id="sidebararticle-menu-content" class="nav-content">
+<!--     <div id="sidebararticle-menu-content" class="nav-content">
         <div class="nav-con-close">
             <span class="icon-chevron-left"></span>
         </div>
@@ -416,7 +476,7 @@
         </div> 
     </div>
 
-
+ -->
     <div id="sidebarcontact-content" class="nav-content">
         <div class="nav-con-close">
             <span class="icon-chevron-left"></span>
@@ -472,8 +532,8 @@
                 </li>
                 <li>
                     <a href="http://zerosoul.github.io/" target="_blank" title="传送门~">
-                        <img src="img\nav-content\yangxiaoer.gif">
-                        <p>杨小二</p>
+                        <img src="img\nav-content\mozilla.gif">
+                        <p>mozilla</p>
                     </a>   
                     <div class="nav-content-underline"></div>
                 </li>
