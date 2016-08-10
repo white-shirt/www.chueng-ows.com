@@ -28,7 +28,7 @@ body{
 
  
 
- .pagenumber,.logo-title,.logo-subtitle,.menu-li,.menu-li p,.art-title,.art-meta,.art-abstract,.art-content,.btn,.footer{
+ .pagenumber,.logo-title,.logo-subtitle,.menu-li,.menu-li p,.art-title,.art-meta,.art-abstract,.art-content,.show-art a,.footer{
     font-family: Lato,"PingFang SC","Microsoft YaHei",sans-serif;
 } 
 
@@ -93,7 +93,7 @@ a{
     text-decoration: none;
     font-size: 20px;
     line-height: 36px;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .logo-subtitle{
@@ -305,7 +305,7 @@ figure{
     background: #eee;
     margin: 1em 0;
     padding: 1em;
-    border-radius: 5px;
+    border-radius: 10px;
     text-shadow: 0 0 1px #fff;
     line-height: 1.6;
     overflow: auto;
@@ -331,19 +331,18 @@ p{
     margin-top: 50px;
     text-align: center;
     display: block;
+
 }
 
-.btn{
-    color: #fff;
-    font-size: 14px;
-    background: #222;
-    line-height: 2;
-    display: inline-block;
-    padding: 0 20px;
-    border: 2px solid #222;
-    text-decoration: none;
-    border-radius: 20px;
+.show-art a{
+    padding: 5px 20px;
+    border: 2px solid #555;
+    border-radius: 10px;
 }
+
+
+
+
 
 .show-art a:hover{
     background-color: #fff;
