@@ -338,6 +338,7 @@ p{
     padding: 5px 20px;
     border: 2px solid #555;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 
@@ -371,13 +372,13 @@ p{
     text-align: center;
 }
 
-.pagination span{
+.pagination a{
     cursor: pointer;
     font-size: 40px;
     color: #555;
     margin: 0 80px;
 }
-.pagination span:hover{
+.pagination a:hover{
     color: #f15623;
 }
 
